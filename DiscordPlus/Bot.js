@@ -117,7 +117,7 @@ class Bot extends Discord.Client {
         this.errorHandler = this.options.errorHandler || defaultErrorHandler;
         this.commands = this.options.commands || [];
         if (!this.options.helpCommand) {
-            let helpCommand = new Command(defaultHelpCommand, "help", "group/command", "Ce message-ci.", [], false);
+            let helpCommand = new Command(defaultHelpCommand, "help", "group/command", "This message.", [], false);
             this.addCommand(helpCommand);
         }
         else if (this.options.helpCommand instanceof Command)
