@@ -15,4 +15,4 @@ bot.on('ready', on_ready);
 
 bot.on('message', bot.on_message);
 
-bot.login('Njc2MTgxMjM4MzE4NDk3ODE5.XkL7KA.IwRxTglrhkv0xORG9fMsfSofsLY');
+bot.login('token');

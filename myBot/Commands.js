@@ -12,7 +12,7 @@ const { notPrivateMessage } = require("./Checks");
 
 exports.bot = new DiscordPlus.Bot({prefix: "$",
                                    errorHandler: on_error,
-                                   botOwner: "258591131758100481"});
+                                   botOwner: "ID"});
 
 exports.bot.addCommand(Admin.adminGroup,
                Regular.message);
