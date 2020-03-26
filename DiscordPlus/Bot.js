@@ -162,9 +162,10 @@ class Bot extends Discord.Client {
             prefix = this.prefix;
         if (!message.author.bot && message.content.startsWith(prefix)) {
             let command_content = message.content.replace(prefix, "");
-            let reply = await this._commandHandler(message, command_content, this);
-            if (!reply)
-                this.errorHandler(message, new Errors.CommandNotFound(""));
+            try {
+                let reply = await this._commandHandler(message, command_content, this);
+                if (!reply) throw new Errors.CommandNotFound(""));
+            catch (e) this.errorHandler(message, e);
         }
     }
 
